@@ -1,0 +1,15 @@
+.app-sidebar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 250px;
+  border-radius: 0 4px 4px 0;
+  height: calc(100vh - 130px);
+  background: #191919;
+  transform: translateX(-250px);
+  transition: transform 0.15s linear;
+  box-shadow: 0 0 5px 1px #000;
+}
+.app-sidebar_visible {
+  transform: translateX(0);
+}

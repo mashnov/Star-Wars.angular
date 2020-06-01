@@ -1,0 +1,18 @@
+<div
+  class="app-sidebar"
+  [ngClass]="isVisible && 'app-sidebar_visible'"
+>
+  <div class="app-sidebar__search">
+    <app-sidebar-search
+      [filterValue]="filterValue"
+      (filterValueChange)="filterValueChange($event)"
+    ></app-sidebar-search>
+  </div>
+  <div class="app-sidebar__list">
+    <app-sidebar-list
+      [planetList]="planetList"
+      [selectedPlanetId]="selectedPlanetId"
+      (selectedPlanetChange)="selectedPlanetChange($event)"
+    ></app-sidebar-list>
+  </div>
+</div>

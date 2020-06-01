@@ -1,0 +1,18 @@
+<app-preloader
+  *ngIf="planetListIsLoading"
+></app-preloader>
+<div
+  class="app-wrapper"
+  [ngClass]="planetListIsLoading && 'app-wrapper_blur'"
+>
+  <app-header></app-header>
+  <app-sidebar
+    [filterValue]="filterValue"
+    [planetList]="filteredPlanetList()"
+    [selectedPlanetId]="selectedPlanetId"
+    [isVisible]="sidebarIsVisible()"
+    (filterValueChange)="filterValueChange($event)"
+    (selectedPlanetChange)="selectedPlanetChange($event)"
+  ></app-sidebar>
+  <app-content></app-content>
+</div>

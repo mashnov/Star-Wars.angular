@@ -1,0 +1,7 @@
+<div
+  (click)="selectedPlanetChange(planet.id)"
+  class="app-sidebar-list-item"
+  [ngClass]="selectedPlanetId === planet.id && 'app-sidebar-list-item_selected'"
+>
+  {{ planet.name }}
+</div>

@@ -1,0 +1,15 @@
+<div class="app-sidebar-list">
+  <table>
+    <tbody>
+      <tr *ngFor="let planet of planetList">
+        <td>
+          <app-sidebar-list-item
+            [planet]="planet"
+            [selectedPlanetId]="selectedPlanetId"
+            (selectedPlanetChange)="selectedPlanetChange($event)"
+          ></app-sidebar-list-item>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
